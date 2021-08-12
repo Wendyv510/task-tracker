@@ -118,7 +118,7 @@ footer img {
 
 /*************** Blog **********************/
 
-.blog {
+blog {
   display: flex;
   position: absolute;
   top: 0;
@@ -132,7 +132,7 @@ footer img {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.blog h1 {
+blog h1 {
   color: var(--primary-orange);
 }
 
