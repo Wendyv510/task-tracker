@@ -5,7 +5,7 @@
   "main": "emailkey.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "react-scripts": "^4.0.3"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.14.5",
     "webpack-cli": "^4.8.0"
   }
 }
