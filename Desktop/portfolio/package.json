@@ -4,7 +4,8 @@
   "description": "Portfolio",
   "main": "emailkey.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/Wendyv510/portfolio#readme",
   "dependencies": {
     "react-scripts": "^4.0.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.8.0"
   }
 }
