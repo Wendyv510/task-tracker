@@ -25,6 +25,13 @@ const App = () => {
     return data 
   }
 
+  const fetchTask = async (id) => {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`)
+    const data = await res.json() 
+
+    return data 
+  }
+
   const addTask = (task) => {
     const res= await fetch('http://localhost:5000/tasks', {
       method: 'POST',
@@ -34,10 +41,10 @@ const App = () => {
       body: JSON.stringify(task) 
     })
 
-    const data = res.json() 
+    const data = await res.json() 
 
     setTasks([...tasks, data])
-    
+
     // const id = Math.floor(Math.random() * 10000) + 1 
     // const newTask = { id, ...task } 
     // setTasks([...tasks, newTask])
