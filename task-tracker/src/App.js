@@ -33,7 +33,7 @@ const App = () => {
   }
 
   const addTask = (task) => {
-    const res= await fetch('http://localhost:5000/tasks', {
+    const res = await fetch('http://localhost:5000/tasks', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
