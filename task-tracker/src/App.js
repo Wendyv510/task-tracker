@@ -32,7 +32,7 @@ const App = () => {
     return data 
   }
 
-  const addTask = (task) => {
+  const addTask =  async (task) => {
     const res = await fetch('http://localhost:5000/tasks', {
       method: 'POST',
       headers: {
@@ -51,10 +51,12 @@ const App = () => {
   }
 
   const deleteTask =  async (id) => {
-    await fetch('http://localhost:5000/tasks/${id}', {
+    const res = await fetch(`http://localhost:5000/tasks/${id}`, {
       method: 'DELETE' 
     })
-     setTasks(tasks.filter((task) => task.id !== id))
+    res.status === 200 
+     ? setTasks(tasks.filter((task) => task.id !== id))
+     :alert('Error Deleting this Task')
   }
 
     const toggleReminder = async (id) => { 
